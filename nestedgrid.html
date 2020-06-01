@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Grid</title>
+    <style>
+        .grid-container {
+            display: grid;
+            /* grid-template-columns: 1fr 1fr 1fr;*/
+            grid-template-columns: repeat(2, 2fr 1fr);
+            grid-gap: 1em;
+            grid-auto-rows: minmax(150px, auto);
+
+        }
+
+        .grid-container>div {
+            padding: 1em;
+            background-color: paleturquoise;
+        }
+
+        .grid-container>div:nth-child(even) {
+            background-color: blue;
+        }
+
+        #div1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            align-items: start;
+            justify-items: start;
+        }
+
+        #div1 div {
+            border: 3px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <dic class="grid-container">
+        <div id="div1">Jeon Jungkook:
+            <div>Vocalist</div>
+            <div>Dancer</div>
+            <div>Singer</div>
+            <div>Song writer</div>
+            <div>Lyricist</div>
+            <div>Rapper</div>
+
+        </div>
+        <div>2 Jeon Junkook</div>
+        <div>3 Park Jimin</div>
+        <div>4 Kim Namjoon</div>
+        <div>5 Min Yoongi</div>
+        <div>6 Kim Seokjin</div>
+        <div>7 Jung Hoseok</div>
+        </div>
+</body>
+
+</html>
